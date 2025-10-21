@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Get your ID</title>
+
+  <!-- ✅ Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    /* ✅ Static Background Image */
+    .bg-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bg-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* ✅ WhatsApp Button */
+    .btn-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 16px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      background: #25D366;
+      color: #fff;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+      z-index: 10;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      animation: bubble-pulse 0.6s infinite alternate ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-whatsapp i {
+      font-size: 22px;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1DA851;
+      transform: translateX(-50%) scale(1.2);
+      box-shadow: 0 0 30px rgba(37, 211, 102, 1);
+    }
+
+    /* ✅ Fast Pulse Animation */
+    @keyframes bubble-pulse {
+      0% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.7);
+      }
+
+      50% {
+        transform: translateX(-50%) scale(1.15);
+        box-shadow: 0 0 25px rgba(37, 211, 102, 0.9);
+      }
+
+      100% {
+        transform: translateX(-50%) scale(1.25);
+        box-shadow: 0 0 35px rgba(37, 211, 102, 1);
+      }
+    }
+
+    /* 📱 Mobile Responsive Fix */
+    @media (max-width: 480px) {
+      .btn-whatsapp {
+        font-size: 18px;
+        padding: 14px 25px;
+        width: 80%;
+      }
+
+      .btn-whatsapp i {
+        font-size: 20px;
+      }
+
+      .bg-img img {
+        object-fit: contain;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Static Background Image -->
+  <div class="bg-img">
+    <img src="image.jpg" alt="Background">
+  </div>
+
+  <!-- ✅ WhatsApp Button with Icon -->
+  <a id="waBtn" class="btn-whatsapp"
+    href="https://wa.me/+15793008595?text=I%20WANT%20WIN%20ID%20NOW"
+    target="_blank">
+    <i class="fa-solid fa-key"></i> Get ID Now
+  </a>
+</body>
+
+</html>
